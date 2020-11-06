@@ -1,0 +1,18 @@
+/* pages/find/find.wxss */
+
+.section {
+  margin: 0 32rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-header-right {
+  color: #2aa22a;
+}
+
+.section-body {
+  white-space: nowrap;
+}

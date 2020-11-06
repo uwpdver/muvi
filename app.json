@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/detail/detail",
+    "pages/films/films",
     "pages/find/find"
   ],
   "window": {

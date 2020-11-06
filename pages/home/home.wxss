@@ -1,47 +1,46 @@
 /* pages/home/home.wxss */
-.page {
-  background-color: #e3e3e3;
+
+.section {
+  margin: 0 32rpx;
 }
 
-.film-list {
- margin-top: 24rpx; 
-}
-
-.film-item {
-  overflow: hidden;
+.section-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 24rpx 24rpx;
-  border-radius: 12rpx;
-  background-color: #ffffff;
 }
 
-.film-item image {
-  flex: 0 0 177rpx;
-  width: 177rpx;
+.section-header-right {
+  color: #00ff00;
+}
+
+.section-body {
+}
+
+.films-wrapper {
+  white-space: nowrap;
+}
+
+.film-wrapper-inline {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+  text-align: center;
+}
+
+.film-wrapper-inline .film-cover {
+  width: 175rpx;
   height: 250rpx;
 }
 
-.film-right {
-  flex: 1;
-  padding: 24rpx;
-}
-
-.film-title {
-  font-size: 36rpx;
-}
-
-.single-line-overflow {
+.film-wrapper-inline .film-name {
+  display: block;
   overflow: hidden;
+  width: 175rpx;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.film-right>view {
-  width: 450rpx;
-}
-
-.direct-name {
-  display: inline;
+.film-wrapper-inline:not(:last-child) {
+  margin-right: 24rpx;
 }

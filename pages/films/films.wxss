@@ -2,10 +2,11 @@
 
 .page {
   background-color: #e3e3e3;
+  height: 100vh;
 }
 
 .film-list {
- margin-top: 24rpx; 
+   padding-top: 24rpx; 
 }
 
 .film-item {
