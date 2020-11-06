@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/find/find"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#07c160",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "就是没时间"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "backgroundColor": "#07c160",
+    "selectedColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/home.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "assets/images/modular.png",
+        "selectedIconPath": "assets/images/modular.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+} 

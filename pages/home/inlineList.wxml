@@ -1,0 +1,23 @@
+<!--
+label: 'string',
+list: [
+  {
+    id: 'number|string',
+    text: 'number|string',
+  }
+],
+key: 'string',
+-->
+<template name="inlineList">
+  <view>
+		<text>{{label}}:</text>
+			<view
+				class=""
+			  wx:for="{{list}}"
+			  wx:key="{{keyName}}"
+			>
+			  <text>{{item.text}}</text>
+				<text wx:if="{{index !== list.length - 1}}">/</text>
+			</view>
+  </view>
+</template>

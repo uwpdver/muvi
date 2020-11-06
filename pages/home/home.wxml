@@ -1,0 +1,57 @@
+<view class="page">
+	<scroll-view class="film-list" scroll-y="true">
+		<view 
+		  class="film-item"
+		  bind:tap="filmTap" 
+		  wx:for="{{items}}"
+			wx:for-item="film"
+			wx:key="name"
+		  data-id="{{film.id}}"
+		>
+			<image src="{{film.cover}}" mode="aspectFill"/>
+			<view class="film-right">
+			  <view class="film-title single-line-overflow">
+  			  <text>{{film.name}}</text>
+  			  <text> {{film.alias}}</text>
+  			  <text>({{film.publishedYear}})</text>
+	  		</view>
+		  	<view class="row-direct single-line-overflow">
+			    <text>导演:</text>
+			    <view
+					  class="direct-name"
+					  wx:for="{{film.directs}}" 
+					  wx:for-item="direct"
+					  wx:key="id"
+					>
+					  <text>{{direct.name}}</text>
+						<text wx:if="{{index !== film.directs.length - 1}}">/</text>
+					</view>
+			  </view>
+		  	<view class="row-actors single-line-overflow">
+			    <text>主演:</text>
+			    <view
+					  class="direct-name"
+					  wx:for="{{film.actors}}" 
+					  wx:for-item="actors"
+					  wx:key="id"
+					>
+					  <text>{{actors.name}}</text>
+						<text wx:if="{{index !== film.actors.length - 1}}">/</text>
+					</view>
+			  </view>
+		  	<view class="row-category single-line-overflow">
+			    <text>类型:</text>
+			    <view
+					  class="direct-name"
+					  wx:for="{{film.categorys}}" 
+					  wx:for-item="category"
+					  wx:key="id"
+					>
+					  <text>{{category.name}}</text>
+						<text wx:if="{{index !== film.categorys.length - 1}}">/</text>
+					</view>
+			  </view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
