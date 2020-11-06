@@ -1,28 +1,11 @@
-<view>
-	<section>
-	  <text slot="header-left">近期热映</text>
-	  <navigator slot="header-right" url="../films/films">更多...</navigator>
-	  <scroll-view
-		  slot="content"
-	    class="films-wrapper" 
-	    scroll-x="{{true}}"
-	    scroll-with-animation="{{false}}"
-	  >
-	    <view 
-			  class="film-wrapper-inline"
-			  wx:for="{{items}}"
-			  wx:key="index"
-			>
-			  <navigator url="../detail/detail">
-					<image 
-					  class="film-cover"
-					  src="{{item.cover}}"
-					  mode="aspectFit"
-					  lazy-load="true"
-					/>
-			    <text class="film-name">{{item.name}}</text>
-				</navigator>
-			</view>	
-	  </scroll-view>
-	</section>
-</view>
+<scroll-view
+ class="home-page"
+ scroll-x="{{false}}"
+ scroll-y="{{true}}"
+ scroll-with-animation="{{false}}"
+>
+	<view class="section-wrapper" wx:for="{{[1, 2, 3, 4]}}">
+		<section-horiz title="近期热映" items="{{items}}"></section-horiz>
+	</view>
+</scroll-view>
+

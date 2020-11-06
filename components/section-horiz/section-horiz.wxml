@@ -1,0 +1,27 @@
+<section>
+	<text slot="header-left">{{title}}</text>
+	<navigator slot="header-right" url="../films/films">更多...</navigator>
+	<scroll-view
+	 slot="content"
+	 class="films-wrapper"
+	 scroll-x="{{true}}"
+	 scroll-with-animation="{{false}}"
+	>
+		<view
+		 class="film-wrapper-inline"
+		 wx:for="{{items}}"
+		 wx:key="index"
+		>
+			<navigator url="../detail/detail">
+				<image
+				 class="film-cover"
+				 src="{{item.cover}}"
+				 mode="aspectFit"
+				 lazy-load="true"
+				/>
+				<text class="film-name">{{item.name}}</text>
+			</navigator>
+		</view>
+	</scroll-view>
+</section>
+
