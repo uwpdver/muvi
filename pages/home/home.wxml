@@ -1,14 +1,9 @@
-<scroll-view
- class="home-page"
- scroll-x="{{false}}"
- scroll-y="{{true}}"
- scroll-with-animation="{{false}}"
->
+<view class="home-page">
 	<view class="search-bar">
 		<navigator class="input" url="../search/search">搜索</navigator>
 	</view>
-	<view class="section-wrapper" wx:for="{{[1, 2, 3, 4]}}">
+	<view class="section-wrapper" wx:for="{{[1, 2, 3, 4, 5]}}">
 		<section-horiz title="近期热映" items="{{items}}"></section-horiz>
 	</view>
-</scroll-view>
+</view>
 

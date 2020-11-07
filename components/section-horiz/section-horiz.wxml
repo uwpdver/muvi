@@ -6,6 +6,7 @@
 	 class="films-wrapper"
 	 scroll-x="{{true}}"
 	 scroll-y="{{false}}"
+	 enhanced="{{true}}"
 	 show-scrollbar="{{false}}"
 	 scroll-with-animation="{{false}}"
 	>

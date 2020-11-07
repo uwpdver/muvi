@@ -1,10 +1,6 @@
 
 .page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 750rpx;
-  height: 100%;
 }
 
 text {
@@ -12,10 +8,9 @@ text {
 }
 
 .banner {
-  /* width: 750rpx; */
   position: relative;
   white-space: nowrap;
-  height: 375rpx;
+  height: 321rpx;
 }
 
 .banner::after {
@@ -29,17 +24,13 @@ text {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.7) 100%);
 }
 
-swiper {
-  height: 321rpx;
-}
-
 swiper-item {
   text-align: center;
 }
 
 .banner-image {
-  width: 550rpx;
   height: 100%;
+  width: auto;
 }
 
 .banner-image:not(:last-child) {
@@ -48,4 +39,39 @@ swiper-item {
 
 .body {
   padding: 32rpx;
+}
+
+.avatar {
+  margin-right: 12rpx;
+  border-radius: 50%;
+  width: 48rpx;
+  height: 48rpx;
+  background-color: blueviolet;
+}
+
+.comment-wrapper {
+  padding-bottom: 12rpx;
+}
+
+.comment-wrapper:not(:last-child){
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.comment-body {
+  /* overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+  text-align: justify;
+}
+
+.page .section {
+  margin-bottom: 48rpx;
 }

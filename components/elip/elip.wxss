@@ -1,0 +1,27 @@
+.elip {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.elip--multiple {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.show-all {
+  overflow: unset;
+}
+
+.show-all-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 2em;
+  padding: 0 0.5em;
+  line-height: 1;
+  background-color: #07c160;
+  color: #ffffff;
+}

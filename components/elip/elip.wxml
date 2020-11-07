@@ -1,0 +1,9 @@
+<!-- <view class="show-all-btn" bind:tap="toggleShowAll">{{isShowAll? '收起' : '展开'}}</view> -->
+<view
+ class="elip {{isShowAll ? 'show-all' : ''}} {{line > 1 ? 'elip--multiple' : ''}}"
+ style="{{line > 1 && !isShowAll ? '-webkit-line-clamp:' + line + ' ;' : ''}}"
+ bind:tap="toggleShowAll"
+>
+	<slot></slot>
+</view>
+

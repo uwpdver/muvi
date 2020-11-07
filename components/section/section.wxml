@@ -1,13 +1,14 @@
 <view class="section">
-		<view class="section-header">
-			<view class="section-header-left">
-			 <slot name="header-left"></slot>
-			</view>
-			<view class="section-header-right">
-			  <slot name="header-right"></slot>
-			</view>
+	<view class="section-header">
+		<view class="section-header-left">
+			<slot name="header-left"></slot>
 		</view>
-		<view class="section-body">
-			  <slot name="content"></slot>
+		<view class="section-header-right">
+			<slot name="header-right"></slot>
 		</view>
 	</view>
+	<view class="section-body">
+		<slot name="content"></slot>
+	</view>
+</view>
+

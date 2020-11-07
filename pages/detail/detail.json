@@ -4,5 +4,8 @@
   "enablePullDownRefresh": false,
   "onReachBottomDistance": 50,
   "disableScroll": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "section": "../../components/section/section",
+    "elip": "../../components/elip/elip"
+  }
 }
