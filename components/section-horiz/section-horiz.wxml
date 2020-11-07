@@ -5,6 +5,8 @@
 	 slot="content"
 	 class="films-wrapper"
 	 scroll-x="{{true}}"
+	 scroll-y="{{false}}"
+	 show-scrollbar="{{false}}"
 	 scroll-with-animation="{{false}}"
 	>
 		<view

@@ -4,6 +4,9 @@
  scroll-y="{{true}}"
  scroll-with-animation="{{false}}"
 >
+	<view class="search-bar">
+		<navigator class="input" url="../search/search">搜索</navigator>
+	</view>
 	<view class="section-wrapper" wx:for="{{[1, 2, 3, 4]}}">
 		<section-horiz title="近期热映" items="{{items}}"></section-horiz>
 	</view>

@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/detail/detail",
     "pages/films/films",
-    "pages/find/find"
+    "pages/find/find",
+    "pages/search/search"
   ],
   "window": {
     "navigationBarBackgroundColor": "#07c160",

@@ -1,0 +1,24 @@
+<view class="search-page">
+	<view class="search-bar">
+		<input class="input" placeholder="搜索" />
+	</view>
+	<scroll-view class="search-results">
+		<navigator
+		 class="result-item"
+		 url="../detail/detail"
+		 wx:for="{{[1, 2, 3, 4, 5, 6]}}"
+		 wx:key="index"
+		>
+			<view class="result-item-left"></view>
+			<view class="result-item-right">
+				<view class="result-item-title">
+					<text >海绵宝宝</text>
+				</view>
+				<view class="result-item-info">
+					<text >是谁住在深海的大菠萝里，海绵宝宝</text>
+				</view>
+			</view>
+		</navigator>
+	</scroll-view>
+</view>
+

@@ -7,9 +7,7 @@
 .film-wrapper-inline {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
   width: min-content;
-  text-align: center;
 }
 
 .film-wrapper-inline .film-cover {

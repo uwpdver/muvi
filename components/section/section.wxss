@@ -1,7 +1,7 @@
 /* pages/find/find.wxss */
 
 .section {
-  margin: 0 32rpx;
+  margin: 0 24rpx;
 }
 
 .section-header {

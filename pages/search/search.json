@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "搜索",
+  "navigationStyle": "default",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "disableScroll": false,
+  "usingComponents": {}
+}

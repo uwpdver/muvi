@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "首页",
   "usingComponents": {
     "section-horiz": "../../components/section-horiz/section-horiz"
   }
