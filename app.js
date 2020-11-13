@@ -225,6 +225,10 @@ App({
           'https://img3.doubanio.com/view/photo/raw/public/p2588860640.jpg'
         ]
       }
-    ]
-  }, 
+    ],
+    userInfo: {
+      avatar: 'https://i2.hdslb.com/bfs/archive/4b88fa2086bae4028a0d4d28be39f37691684576.png@336w_190h.jpg',
+      nickname: '周杰伦',
+    }
+  },
 });

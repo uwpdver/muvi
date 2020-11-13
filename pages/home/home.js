@@ -7,7 +7,7 @@ Page({
     items: app.globalData.items
   },
   onLoad: function (options) {
-    wx.showToast({ title: "页面加载完成" });
+    // wx.showToast({ title: "页面加载完成" });
     request.get('lessons/lesson-pack/all-list')
       .then(
         res => {

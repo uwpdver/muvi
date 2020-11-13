@@ -1,14 +1,44 @@
 <view class="page">
 	<view class="body">
 		<view>
-			<text class="large-font" selectable="false" space="false" decode="false">无间道 無間道 (2002)</text>
+			<text class="large-font" selectable="false" space="false"
+				decode="false">{{filmInfo.name + ' '+ filmInfo.alias+ ' (' + filmInfo.publishedYear + ' )'}}</text>
 		</view>
 	</view>
 	<section>
-		<text slot="header-left">无间道的剧情简介</text>
+		<text slot="header-left">{{filmInfo.name}}的剧情简介</text>
 		<text slot="header-right"></text>
 		<view slot="content" class="desc-wrapper">
-			<text class="normal-font" selectable="false" space="false" decode="false">1991年，香港黑帮三合会会员刘健明（刘德华）听从老大韩琛（曾志伟）的吩咐，加入警察部队成为黑帮卧底，韩琛许诺刘健明会帮其在七年后晋升为见习督察。1992年，警察训练学校优秀学员陈永仁（梁朝伟）被上级要求深入到三合会做卧底，终极目标是成为韩琛身边的红人。2002年，两人都不负重望，也都身背重压，刘健明渐想成为一个真正的好人，陈永仁则盼着尽快回归警察身份。重案组从陈永仁手中获悉一批毒品交易情报，锁紧目标人物韩琛，没料情报被刘健明泄出，双方行动均告失败。但此事将双方均有卧底的事实暴露，引发双方高层清除内鬼的决心。命运迥异又相似的刘健明和陈永仁开始在无间道的旅程中接受严峻考验。</text>
+			<elip line="{{5}}">
+				<text class="normal-font" selectable="false" space="false" decode="false">{{filmInfo.desc}}</text>
+			</elip>
+		</view>
+	</section>
+	<section>
+		<text slot="header-left">相关人物</text>
+		<text slot="header-right">更多...</text>
+		<view
+		 slot="content"
+		 class="scroll-view-horiz"
+		 scroll-x="{{true}}"
+		 scroll-y="{{false}}"
+		 enhanced="{{true}}"
+		 show-scrollbar="{{false}}"
+		>
+			<view
+			 class="people-wrapper"
+			 wx:for="{{filmInfo.relatedPeople}}"
+			 wx:for-item="people"
+			 wx:key="index"
+			>
+				<image
+				 class="avatar-large"
+				 src="{{people.avatar}}"
+				 mode="aspectFill"
+				 lazy-load="{{false}}"
+				/>
+				<text>{{people.name}}</text>
+			</view>
 		</view>
 	</section>
 	<section>
@@ -23,19 +53,9 @@
 		>
 			<image
 			 class="banner-image"
-			 src="https://img9.doubanio.com/view/photo/raw/public/p1182116984.jpg"
-			 mode="heightFix"
-			 lazy-load="false"
-			/>
-			<image
-			 class="banner-image"
-			 src="https://img1.doubanio.com/view/photo/raw/public/p2581669417.jpg"
-			 mode="heightFix"
-			 lazy-load="false"
-			/>
-			<image
-			 class="banner-image"
-			 src="https://img3.doubanio.com/view/photo/raw/public/p2588860640.jpg"
+			 wx:for="{{filmInfo.images}}"
+			 wx:key="index"
+			 src="{{item}}"
 			 mode="heightFix"
 			 lazy-load="false"
 			/>
@@ -47,21 +67,22 @@
 		<view class="" slot="content">
 			<view
 			 class="comment-wrapper"
-			 wx:for="{{[1, 2, 3]}}"
+			 wx:for="{{commends}}"
+			 wx:for-item="commend"
 			 wx:key="index"
 			>
 				<view class="comment-header">
 					<image
 					 class="avatar"
-					 src=""
+					 src="{{commend.user.avatar}}"
 					 mode="aspectFit"
 					/>
-					<text class="commenter-name">一个没有名字的人</text>
+					<text class="commenter-name">{{commend.user.nickname}}</text>
 				</view>
 				<view class="comment-body">
-					<elip line="{{3}}">
-						<text class="comment-content">清晨他结束了病痛与寒冷。那晚我在台上演唱了亲密爱人。北风中的乐队配着蜡烛燃尽了痛苦。雨水冲刷墓碑和那颗杨树。生命到尽头，却也解了你的相思之苦。我会带着你的期待走向我的前路</text>
-					</elip>
+					<view>
+						<text class="comment-content">{{commend.content}}</text>
+					</view>
 				</view>
 			</view>
 		</view>

@@ -1,1 +1,18 @@
 /* pages/find/find.wxss */
+
+.cards-container {
+  overflow: hidden;
+
+  width: 750rpx;
+  height: 750rpx;
+
+  background-color: #ccc;
+}
+
+.card-container {
+  position: absolute;
+  border-radius: 20rpx;
+  width:  250rpx;
+  height: 400rpx;
+  background-color: red;
+}

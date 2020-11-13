@@ -41,6 +41,34 @@ swiper-item {
   padding: 32rpx;
 }
 
+.scroll-view-horiz {
+  overflow-x: scroll;
+  overflow-y: hidden;
+   display: flex;
+   white-space: nowrap;
+   /* height: 150rpx; */
+}
+
+.people-wrapper {
+  text-align: center;
+  width: min-content;
+}
+
+.people-wrapper text {
+  display: block;
+}
+
+.avatar-large {
+  display: inline-block;
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.scroll-view-horiz .people-wrapper:not(:last-child) {
+  margin-right: 32rpx;
+}
+
 .avatar {
   margin-right: 12rpx;
   border-radius: 50%;

@@ -4,6 +4,7 @@
     "pages/detail/detail",
     "pages/films/films",
     "pages/find/find",
+    "pages/kanjia/kanjia",
     "pages/search/search"
   ],
   "window": {
@@ -25,6 +26,12 @@
       {
         "pagePath": "pages/find/find",
         "text": "发现",
+        "iconPath": "assets/images/modular.png",
+        "selectedIconPath": "assets/images/modular.png"
+      },
+      {
+        "pagePath": "pages/kanjia/kanjia",
+        "text": "砍价",
         "iconPath": "assets/images/modular.png",
         "selectedIconPath": "assets/images/modular.png"
       }
