@@ -1,4 +1,5 @@
 <view class="kanjia">
+	<modal visibe="{{isEventRuleModalVisible}}" bind:onMaskTap="closeModal"></modal>
 	<view class="header">
 		<view class="messages">
 			<view
@@ -52,8 +53,8 @@
 			<text class="count-down-numbber">17</text>
 			结束
 		</view>
-		<button>邀请好友帮我砍价</button>
-		<button>残忍结束，补差价购买</button>
+		<button data-name="shareBtn" open-type="share">邀请好友帮我砍价</button>
+		<button bind:tap="showModal">残忍结束，补差价购买</button>
 	</view>
 	<view class="footer">
 		<view class="footer-title">砍价记录</view>

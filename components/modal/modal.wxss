@@ -1,0 +1,25 @@
+.ob-modal {
+}
+
+.ob-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 750rpx;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ob-modal-conent {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+
+  width: 500rpx;
+  min-height: 300rpx;
+
+  background-color: #ffffff;
+
+  transform: translate(-50%, 0);
+}

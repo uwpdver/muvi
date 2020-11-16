@@ -1,0 +1,8 @@
+<view class="ob-modal" wx:if="{{visibe}}">
+	<view class="ob-modal-mask" bind:tap="tapHandler">
+		<view class="ob-modal-conent">
+			<slot></slot>
+		</view>
+	</view>
+</view>
+
