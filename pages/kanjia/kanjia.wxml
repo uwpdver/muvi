@@ -1,21 +1,30 @@
 <view class="kanjia">
-	<modal visibe="{{isEventRuleModalVisible}}" bind:onMaskTap="closeModal"></modal>
+	<modal visibe="{{isComfirmModalVisible}}" bind:onMaskTap="closeModal"></modal>
+	<modal visibe="{{isEventRuleModalVisible}}" bind:onMaskTap="closeEventRuleModal"></modal>
 	<view class="header">
-		<view class="messages">
-			<view
-			 class="message-item"
+		<swiper
+		 vertical="{{true}}"
+		 autoplay="{{true}}"
+		 circular="{{true}}"
+		 interval="{{1000}}"
+		 display-multiple-items="{{2}}"
+		 class="messages"
+		>
+			<swiper-item
 			 wx:for="{{messages}}"
 			 wx:key="id"
 			 wx:for-item="msg"
 			>
-				<image
-				 class="avatar-min"
-				 mode="aspectFill"
-				 src="{{msg.avatar}}"
-				/>
-				<text class="message-content">{{msg.content}}</text>
-			</view>
-		</view>
+				<view class="message-item">
+					<image
+					 class="avatar-min"
+					 mode="aspectFill"
+					 src="{{msg.avatar}}"
+					/>
+					<text class="message-content">{{msg.id}}:{{msg.content}}</text>
+				</view>
+			</swiper-item>
+		</swiper>
 		<view class="user-info">
 			<image
 			 class="avatar-mid"
@@ -25,7 +34,7 @@
 			<text class="nickname">{{userInfo.nickname}}正在砍价</text>
 		</view>
 		<view class="rule">
-			<button>活动规则</button>
+			<button bind:tap="showEventRuleModal">活动规则</button>
 		</view>
 	</view>
 	<view class="body">
@@ -42,9 +51,9 @@
 			</view>
 		</view>
 		<view class="progress">
-			<view class="progress-inner" style="width: {{100 * (goodsInfo.price - goodsInfo.amountReduced)  / goodsInfo.price}}%"></view>
+			<view class="progress-inner" style="width: {{100 * goodsInfo.amountReduced  / goodsInfo.amountReducedMax}}%"></view>
 		</view>
-		<view class="count-down">
+		<view class="count-down" wx:if="{{!goodsInfo.bargainComplete}}">
 			剩余
 			<text class="count-down-numbber">10</text>
 			:
@@ -53,27 +62,29 @@
 			<text class="count-down-numbber">17</text>
 			结束
 		</view>
-		<button data-name="shareBtn" open-type="share">邀请好友帮我砍价</button>
-		<button bind:tap="showModal">残忍结束，补差价购买</button>
-	</view>
-	<view class="footer">
-		<view class="footer-title">砍价记录</view>
-		<view
-		 class="=record-item"
-		 wx:for="{{records}}"
-		 wx:for-item="record"
-		 wx:key="id"
-		>
-			<image
-			 class="avatar-min"
-			 mode="aspectFill"
-			 src="{{record.user.avatar}}"
-			/>
-			<view class="record-item-mid">
-				<view>{{record.user.nickname}}</view>
-				<view>{{record.createTime}}</view>
+		<view>
+			<button data-name="shareBtn" open-type="share">邀请好友帮我砍价</button>
+			<button bind:tap="showModal">残忍结束，补差价购买</button>
+		</view>
+		<view class="footer">
+			<view class="footer-title">砍价记录</view>
+			<view
+			 class="=record-item"
+			 wx:for="{{records}}"
+			 wx:for-item="record"
+			 wx:key="id"
+			>
+				<image
+				 class="avatar-min"
+				 mode="aspectFill"
+				 src="{{record.user.avatar}}"
+				/>
+				<view class="record-item-mid">
+					<view>{{record.user.nickname}}</view>
+					<view>{{record.createTime}}</view>
+				</view>
+				<view class="record-item-right">砍掉{{record.money}}元</view>
 			</view>
-			<view class="record-item-right">砍掉{{record.money}}元</view>
 		</view>
 	</view>
 </view>

@@ -1,4 +1,6 @@
 import server from './server'
+import moment from '../../lib/moment.min.js'
+
 console.log(server);
 const app = getApp();
 
@@ -14,9 +16,10 @@ const pageOptions = {
     records: []
   },
   // 页面载入时
-  async onLoad(e) {
+  onLoad(e) {
     this.init(e)
     this.fetchData()
+    console.log(moment);
   },
   // 页面初始化
   init(e) { },
@@ -56,10 +59,16 @@ const pageOptions = {
     })
   },
   showModal() {
-    this.setData({isEventRuleModalVisible: true})
+    this.setData({ isComfirmModalVisible: true })
   },
   closeModal() {
-    this.setData({isEventRuleModalVisible: false})
+    this.setData({ isComfirmModalVisible: false })
+  },
+  showEventRuleModal() {
+    this.setData({ isEventRuleModalVisible: true })
+  },
+  closeEventRuleModal() {
+    this.setData({ isEventRuleModalVisible: false })
   },
   // 获取数据
   async fetchData() {

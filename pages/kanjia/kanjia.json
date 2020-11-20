@@ -5,6 +5,7 @@
   "onReachBottomDistance": 50,
   "disableScroll": false,
   "usingComponents": {
-    "modal": "../../components/modal/modal"
+    "modal": "../../components/modal/modal",
+    "eventRuleModal": "../../components/eventRuleModal/eventRuleModal"
   }
 }

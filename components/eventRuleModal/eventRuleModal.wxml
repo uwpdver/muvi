@@ -1,0 +1,4 @@
+<Modal class="event-rule-modal" wx:if="{{visibe}}">
+	<view>这是活动规则</view>
+</Modal>
+

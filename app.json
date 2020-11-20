@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/kanjia/kanjia",
     "pages/home/home",
     "pages/detail/detail",
     "pages/films/films",
     "pages/find/find",
-    "pages/kanjia/kanjia",
     "pages/search/search"
   ],
   "window": {
@@ -18,20 +18,14 @@
     "selectedColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "主页",
-        "iconPath": "assets/images/home.png",
-        "selectedIconPath": "assets/images/home.png"
-      },
-      {
-        "pagePath": "pages/find/find",
-        "text": "发现",
+        "pagePath": "pages/kanjia/kanjia",
+        "text": "砍价",
         "iconPath": "assets/images/modular.png",
         "selectedIconPath": "assets/images/modular.png"
       },
       {
-        "pagePath": "pages/kanjia/kanjia",
-        "text": "砍价",
+        "pagePath": "pages/find/find",
+        "text": "发现",
         "iconPath": "assets/images/modular.png",
         "selectedIconPath": "assets/images/modular.png"
       }

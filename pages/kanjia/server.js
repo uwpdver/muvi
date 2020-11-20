@@ -4,15 +4,15 @@ import fakeData from './fakeData';
 
 export default {
   getOrderRecord: async () => {
-    await wait(2000);
+    await wait(0);
     return fakeData.messages
   },
   getGoodsInfo: async () => {
-    await wait(2000);
+    await wait(0);
     return fakeData.goodsInfo
   },
   getHelpRecords: async () => {
-    await wait(2000);
+    await wait(0);
     return fakeData.records
   }
 }

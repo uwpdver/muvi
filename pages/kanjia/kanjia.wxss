@@ -172,3 +172,9 @@
   height: 100%;
   background-color: #e26d6d;
 }
+
+
+.messages {
+  height: 200rpx;
+  width: 750rpx;
+}
